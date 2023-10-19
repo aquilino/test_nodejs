@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Dockerized App</title>
+</head>
+<body>
+  <h1>Containers List</h1>
+  <ul id="containerList"></ul>
+  <script>
+    fetch('/api/containers')
+      .then(response => response.json())
+      .then(data => {
+        const containerList = document.getElementById('containerList');
+        data.forEach(containerName => {
+          const listItem = document.createElement('li');
+          listItem.textContent = containerName;
+          containerList.appendChild(listItem);
+        });
+      })
+      .catch(error => console.error('Error:', error));
+  </script>
+</body>
+</html>

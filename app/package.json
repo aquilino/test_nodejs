@@ -1,0 +1,9 @@
+{
+    "name": "my-dockerized-app",
+    "version": "1.0.0",
+    "description": "Dockerized Node.js App with Dockerode",
+    "dependencies": {
+      "dockerode": "^4.0.0",
+      "express": "^4.17.1"
+    }
+  }
